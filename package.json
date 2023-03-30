@@ -1,0 +1,16 @@
+{
+  "name": "clase-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-styles": "sass sass/style.scss css/style.css",
+    "build-styles-watch": "sass sass/style.scss css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.60.0"
+  }
+}
