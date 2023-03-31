@@ -1,0 +1,79 @@
+@use "reset/reset";
+@use "variables/colors";
+@use "mixins/mixins";
+@use "functions/functions";
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: colors.$ink-dark;
+  padding: 2rem;
+  @extend %flex-column;
+
+  .title {
+    color: colors.$ink-light;
+    padding-bottom: 1.5rem;
+    font-size: functions.pixelsToRem(50);
+    text-transform: uppercase;
+    text-shadow: functions.pixelsToRem(5) functions.pixelsToRem(5)
+      functions.pixelsToRem(30) colors.$ink-coal;
+  }
+
+  .game-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .game-card {
+      max-width: 500px;
+      background-color: colors.$secondary-base;
+      border-radius: functions.pixelsToRem(40);
+      box-shadow: functions.pixelsToRem(5) functions.pixelsToRem(5)
+        functions.pixelsToRem(30) colors.$ink-coal;
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: colors.$ink-coal;
+        padding: functions.pixelsToRem(30);
+        border-radius: 0 0 functions.pixelsToRem(30) functions.pixelsToRem(30);
+      }
+
+      &__title {
+        color: colors.$ink-light;
+        text-transform: uppercase;
+      }
+
+      &__description {
+        color: colors.$ink-light;
+        text-align: justify;
+      }
+
+      &__button {
+        @include mixins.button(colors.$primary-base);
+
+        &:hover {
+          background-color: colors.$primary-dark;
+        }
+      }
+      &__picture {
+        object-fit: cover;
+        object-position: center;
+        min-width: 100%;
+        border-radius: functions.pixelsToRem(30) functions.pixelsToRem(30) 0 0;
+      }
+    }
+  }
+}
