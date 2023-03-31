@@ -1,0 +1,14 @@
+@use "../variables/colors";
+@use "../functions/functions";
+
+@mixin button($background-color) {
+  background-color: $background-color;
+  color: colors.$ink-lightest;
+  padding: 0.5rem 1rem;
+  max-width: 300px;
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: functions.pixelsToRem(20);
+}
