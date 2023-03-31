@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+ul,
+li {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
