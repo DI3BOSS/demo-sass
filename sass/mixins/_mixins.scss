@@ -3,7 +3,7 @@
 
 @mixin button($background-color) {
   background-color: $background-color;
-  color: colors.$ink-lightest;
+  color: colors.$ink-light;
   padding: 0.5rem 1rem;
   max-width: 300px;
   border: 0;
