@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-styles": "sass sass/style.scss css/style.css",
-    "build-styles-watch": "sass sass/style.scss css/style.css --watch"
+    "build-styles": "sass sass/style.scss css/styles.css",
+    "build-styles-watch": "sass sass/style.scss css/styles.css --watch"
   },
   "keywords": [],
   "author": "",
